@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			#box{
+				width: 1000px;
+				height: 100%;
+				position: relative;
+				margin: 0 auto;
+				
+				
+			}
+			#Dtop{
+				background-color: cornflowerblue;
+				color: blue;
+				position: relative;
+				top: 20px;
+				
+			}
+			#btn{
+				border:1px solid blue;
+				position: relative;
+				top: 1px;
+				background-color: cornflowerblue;
+				color: white;
+				
+			}
+			#box{
+				
+				position: relative;
+				top: 20px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oTxt = document.getElementById("txt");
+				var oBtn = document.getElementById("btn");
+				var oTop = document.getElementById("Dtop");
+				var oBox = document.getElementById("box");
+				
+				var str = "0123456789abcdef";
+				
+				oBtn.onclick=function(){
+					var oDiv = document.createElement("div");
+					oDiv.innerHTML = oTxt.value;
+					var a1 = Math.floor(Math.random()*16);
+					var a2 = Math.floor(Math.random()*16);
+					var a3 = Math.floor(Math.random()*16);
+					var a4 = Math.floor(Math.random()*16);
+					var a5 = Math.floor(Math.random()*16);
+					var a6 = Math.floor(Math.random()*16);
+					var str2 = str [a1]+str [a2]+str [a3]+str [a4]+str [a5]+str [a6];
+					var str3 = str [15-a1]+str [15-a2]+str [15-a3]+str [15-a4]+str [15-a5]+str [15-a6];
+					oDiv.style.backgroundColor = "#"+str2;
+					oDiv.style.color = "#"+str3;
+					oDiv.style.opacity = "0.7";
+					oDiv.style.fontSize = Math.random()*20 + 14+'px';
+					oDiv.style.position = "absolute";
+					oDiv.style.left = Math.random()*900+'px';
+					oDiv.style.top  = Math.random()*670+'px';
+					oBox.appendChild(oDiv)
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input id="txt" type="text" />
+		<input id="btn" type="button" value="发表" onclick="_a()"/>
+		
+		 <div id="Dtop"><marquee scrollamount="9" behavior="alternate">
+		 	说说你的建议(～￣▽￣)～
+		 </marquee></div>
+		  <div id="box">
+		 
+		</div>
+	</body>
+</html>

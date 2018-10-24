@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>张良</title>
+		<style type="text/css">
+			body {
+				width: 100%;
+				height: 100%;
+				background-color: rgb(24, 24, 58);
+			}
+			
+			#box {
+				width: 1100px;
+				height: 800px;
+				margin: 0 auto;
+				margin-top: 30px;
+				margin-left: 120px;
+				background-color: rgb(24, 24, 58);
+				color: white;
+				position: fixed;
+			}
+			
+			
+				
+			#zl{
+				width: 1100px;
+				height: 600px;
+				
+			}
+			
+			#back{
+			
+				position: absolute;
+				top: 0px;
+				left: 18px;
+			}
+			#img1{
+				position: absolute;
+				top: 74px;
+				left: 30px;
+				display: block;
+				
+			}
+			#img2{
+				position: absolute;
+				top: 160px;
+				left: 30px;
+				
+			}
+			#img3{
+				position: absolute;
+				top: 238px;
+				left: 30px;
+				
+			}
+			#img4{
+				position: absolute;
+				top: 320px;
+				left: 30px;
+				
+			}
+			
+			#attribute{
+				
+				width: 600px;
+				height: 300px;
+				position: absolute;
+				margin-top: 100px;
+				margin-left: 300px;
+				opacity: 0.9;
+				display: none;
+				
+			}
+			#close{
+				position: absolute;
+				top: 0px;
+				right:-200px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var aImg1=document.getElementById("img1");
+				var aAttribute=document.getElementById("attribute");
+				var aImg2=document.getElementById("close");
+				
+				aImg1.onclick=function(){
+					
+					aAttribute.style.display="block";
+				}
+				aImg2.onclick=function(){
+					
+					aAttribute.style.display="none";
+				}
+	
+			}
+		</script>
+	</head>
+
+	<body>
+
+		<div id="box">
+			
+							
+				
+				
+			<video width="800" height="" id="zl" loop="loop" autoplay="autoplay">
+				
+				<source src="张良.mp4" type="video/mp4"></source>
+				
+			</video>
+			<!--
+            	loop
+            -->
+					
+					<a href="法师.html"><img src="img/back.PNG" id="back"/></a>
+					<img src="img/属性.PNG" id="img1"/>
+					<a href="故事.html"><img src="img/故事.PNG" id="img2"/></a>
+					<a href="装备.html"><img src="img/装备.PNG" id="img3"/></a>
+					<a href="海报.html"><img src="img/海报.PNG" id="img4"/></a>
+			
+		</div>
+        <div id="attribute"><img src="img/属性x.jpg" style="height: 500px; width: 800px;"/>
+        <img src="img/close.PNG" id="close"/>
+        </div>
+	</body>
+
+</html>

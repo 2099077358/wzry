@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.nav{
+				width: 200px;
+				height: 50px;
+				background-color: orange;
+				position: absolute;
+				overflow: hidden;
+				left: 0;
+				top: 0;
+			}
+			
+			.nav div{
+				width: 200px;
+				height: 50px;
+				position: absolute;
+				background-color: red;
+			}
+			.div1{
+				top: 50px;
+			}
+			.div2{
+				top: 100px;
+			}
+			
+			.rr1,.rr2{
+				width: 500px;
+				height: 400px;
+				background-color: rgba(255,16,28,0.5);
+				position: absolute;
+				left: 200px;
+				top: 50px;
+				display: none;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oNav = document.getElementsByClassName("nav")[0];
+				oNav.onmouseover = function(){
+					oNav.style.overflow = "initial"
+				}
+				var aDiv = document.getElementsByClassName("div");
+				var aRr = document.getElementsByClassName("rr");
+				
+				for(var i=0;i<aDiv.length;i++)
+				{
+					aDiv[i].index = i;
+					aDiv[i].onmouseover=function(){
+						aRr[this.index].style.display = "block"
+					}
+					aDiv[i].onmouseout=function(){
+						aRr[this.index].style.display = "none"
+					}
+					aRr[i].onmouseover=function(){
+						this.style.display = "block"
+					}
+					aRr[i].onmouseout=function(){
+						this.style.display = "none"
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="nav">
+			菜单
+			<div class="div div1">1</div>
+			<div class="div div2">2</div>
+			
+		</div>
+		<div class="rr rr1">11</div>
+		<div class="rr rr2">22</div>
+	</body>
+</html>
